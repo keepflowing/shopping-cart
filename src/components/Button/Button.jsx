@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
-import button from './Button.module.css';
+import style from './Button.module.css';
 
 export default function Button({ clickFunction, label, type }) {
   return (
     <button
       onClick={clickFunction}
-      className={button[type]}
+      className={style[type]}
       type="button"
     >
       {label}
