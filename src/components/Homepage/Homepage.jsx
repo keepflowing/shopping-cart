@@ -1,9 +1,11 @@
-//import styles from "./Homepage.module.css";
-
-import Button from "../Button/Button"
+// import styles from "./Homepage.module.css";
+import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 
 export default function Homepage() {
-    return (
-        <Button/>
-    )
+  return (
+    <Link to="/store">
+      <Button label="Enter" />
+    </Link>
+  );
 }
