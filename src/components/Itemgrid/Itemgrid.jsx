@@ -1,10 +1,14 @@
 import Item from '../Item/Item';
+import style from './Itemgrid.module.css';
+
+const myItems = ['Fish', 'Cat', 'Dog'];
 
 export default function Itemgrid() {
   return (
-    <div>
-      <h2>This is the Itemgrid</h2>
-      <Item />
-    </div>
+    <div className={style.grid}>
+      {myItems.map(i => 
+       <Item name={i}/>
+      )}
+      </div>
   );
 }

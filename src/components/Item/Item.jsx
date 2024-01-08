@@ -1,5 +1,9 @@
-export default function Item() {
+import style from './Item.module.css'
+
+export default function Item({name}) {
   return (
-    <h3>I am an Item</h3>
+    <div className={style.item}>
+      <h3>{name}</h3>
+    </div>
   );
 }
