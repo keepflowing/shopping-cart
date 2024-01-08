@@ -1,9 +1,9 @@
 import style from './Item.module.css'
 
-export default function Item({name}) {
+export default function Item({name, price, imgUrl}) {
   return (
     <div className={style.item}>
-      <h3>{name}</h3>
+      <img src={imgUrl}/>
     </div>
   );
 }
