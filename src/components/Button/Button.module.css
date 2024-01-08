@@ -17,3 +17,7 @@
     composes: secondaryColor from "../colors.module.css";
     composes: secondaryBg from "../colors.module.css";
 }
+
+.primary:hover {
+    background-color: #3f3fff; 
+}
