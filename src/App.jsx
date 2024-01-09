@@ -16,7 +16,6 @@ export default function App() {
     const fetchData = async () => {
       const result = await fetch(url);
       result.json().then(r => {
-        console.log(r);
         setItemList(r);
       })
     }

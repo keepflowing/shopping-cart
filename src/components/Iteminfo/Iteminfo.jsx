@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import style from './Iteminfo.module.css';
 
@@ -6,8 +7,12 @@ const getItemById = (iid, list) => {
 }
 
 export default function Iteminfo({items}) {
+  const [item, setItem] = useState({})
   const { id } = useParams();
-  const item = getItemById(id, items);
+  
+  useEffect(() => {
+    if(items.length > 0) setItem(getItemById(id, items))
+  }, [items])
 
   return (
     <div className="container">
