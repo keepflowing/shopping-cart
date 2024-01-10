@@ -1,0 +1,10 @@
+.menu {
+  position: absolute;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 0.8rem;
+  color: black;
+  padding: 0.5rem;
+  right: 0%;
+  top: 108%;
+}
