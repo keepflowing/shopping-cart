@@ -1,8 +1,11 @@
 .button {
+  align-items: center;
   margin-right: 15px;
   border: solid white 1px;
   border-radius: 8px;
+  display: flex;
   height: 2rem;
+  justify-content: center;
   width: 2rem;
 }
 

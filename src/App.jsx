@@ -11,6 +11,7 @@ const url = "https://fakestoreapi.com/products?limit=8";
 export default function App() {
   
   const [itemList, setItemList] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,12 +25,19 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar cart={cart}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/store">
           <Route index element={<Store items={itemList} />} />
-          <Route path="item/:id" element={<Iteminfo items={itemList} />} />
+          <Route 
+            path="item/:id" 
+            element={<Iteminfo 
+              items={itemList} 
+              cart={cart}
+              setCart={setCart}
+              />} 
+            />
         </Route>
         <Route path="*" element={<Errorpage />} />
       </Routes>
