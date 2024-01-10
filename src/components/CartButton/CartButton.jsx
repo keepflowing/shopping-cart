@@ -9,10 +9,9 @@ export default function CartButton({cart}) {
     <div 
       className={style.button}
       onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
     >
       {cart.length}
-      {open && <CartMenu onLeave={() => setOpen(false)}/>}
+      {open && <CartMenu cart={cart} onLeave={() => setOpen(false)}/>}
     </div>
   )
 }
