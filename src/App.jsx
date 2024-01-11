@@ -9,7 +9,7 @@ import Errorpage from './components/Errorpage/Errorpage';
 const url = "https://fakestoreapi.com/products?limit=8";
 
 export default function App() {
-  
+  const [cartOpen, setCartOpen] = useState(false);
   const [itemList, setItemList] = useState([]);
   const [cart, setCart] = useState([]);
 
@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar cart={cart}/>
+      <Navbar cart={cart} open={cartOpen} setOpen={setCartOpen}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/store">
@@ -36,6 +36,8 @@ export default function App() {
               items={itemList} 
               cart={cart}
               setCart={setCart}
+              open={cartOpen}
+              setOpen={setCartOpen}
               />} 
             />
         </Route>

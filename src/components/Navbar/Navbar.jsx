@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import style from './Navbar.module.css';
 import CartButton from '../CartButton/CartButton';
 
-export default function Navbar({cart}) {
+export default function Navbar({cart, open, setOpen}) {
   return (
     <nav className={style.navbar}>
       <div className={style.left} >
@@ -13,7 +13,7 @@ export default function Navbar({cart}) {
           <li className={style.navItem}><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
-      <CartButton cart={cart}/>
+      <CartButton cart={cart} open={open} setOpen={setOpen}/>
     </nav>
   );
 }

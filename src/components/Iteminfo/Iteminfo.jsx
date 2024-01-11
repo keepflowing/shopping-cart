@@ -6,8 +6,9 @@ const getItemById = (iid, list) => {
   return list.filter((i) => i.id == iid)[0];
 }
 
-export default function Iteminfo({items, cart, setCart}) {
+export default function Iteminfo({items, cart, setCart, open, setOpen}) {
   const [item, setItem] = useState({})
+  const [amount, setAmount] = useState(1);
   const { id } = useParams();
 
   useEffect(() => {
@@ -15,8 +16,17 @@ export default function Iteminfo({items, cart, setCart}) {
   }, [items]);
 
   const handleAdd = () => {
-    setCart([...cart, item]);
-    console.log([...cart, item]);
+    const oldCart = [...cart];
+    let n = 0;
+    for(let i in oldCart) {
+      if(oldCart[i].id === item.id) {
+        oldCart[i].amount += parseInt(amount);
+        n++;
+        setCart([...oldCart])
+      }
+    }
+    if(n === 0) setCart([...cart, {...item, amount: parseInt(amount)}]);
+    setOpen(true)
   }
 
   return (
@@ -24,8 +34,8 @@ export default function Iteminfo({items, cart, setCart}) {
       <h1>{item.title}</h1>
       <img className={style.big} src={item.image} />
       <h2>Price: ${item.price}</h2>
+      <input type="number" value={amount} onChange={(e) => {setAmount(e.target.value)}}/>
       <button 
-        type="button" 
         onClick={handleAdd}
       >
         Add to cart

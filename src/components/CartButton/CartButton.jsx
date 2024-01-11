@@ -2,8 +2,7 @@ import style from './CartButton.module.css';
 import { useState } from 'react';
 import CartMenu from '../CartMenu/CartMenu';
 
-export default function CartButton({cart}) {
-  const [ open, setOpen ] = useState(false);
+export default function CartButton({cart, open, setOpen}) {
 
   return (
     <div 
