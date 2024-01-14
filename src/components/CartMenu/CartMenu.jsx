@@ -4,7 +4,7 @@ import style from './CartMenu.module.css';
 export default function CartMenu({ onLeave, cart }) {
   let total = 0;
   for (let i = 0; i < cart.length; i += 1) {
-    total += (cart[i].amount * cart[i].price);
+    total += Math.round((cart[i].amount * cart[i].price) * 100) / 100;
   }
 
   return (
@@ -18,7 +18,7 @@ export default function CartMenu({ onLeave, cart }) {
           {i.title}
           {' '}
           - $
-          {i.price * i.amount}
+          {Math.round((i.price * i.amount) * 100) / 100}
         </p>
       ))
         : <p>No items</p>}
