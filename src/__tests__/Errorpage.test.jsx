@@ -3,7 +3,7 @@ import Errorpage from '../components/Errorpage/Errorpage';
 
 describe('Errorpage', () => {
   it('renders title', () => {
-    render(<Errorpage/>);
-    expect(screen.getByRole("heading").textContent).toMatch(/404 - page not found/i);
+    render(<Errorpage />);
+    expect(screen.getByRole('heading').textContent).toMatch(/404 - page not found/i);
   });
 });
