@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import style from './Button.module.css';
 
 export default function Button({ clickFunction, label, type }) {
@@ -12,12 +11,6 @@ export default function Button({ clickFunction, label, type }) {
     </button>
   );
 }
-
-Button.propTypes = {
-  clickFunction: PropTypes.func,
-  type: PropTypes.string,
-  label: PropTypes.string,
-};
 
 Button.defaultProps = {
   clickFunction: null,
