@@ -7,14 +7,23 @@ export default function Navbar() {
       className={styles.navbar}
       data-testid="navbar"
     >
-      <NavLink to="/">
+      <NavLink
+        to="/"
+        className={({ isActive }) => (isActive ? styles.active : undefined)}
+      >
         <p>Home</p>
       </NavLink>
-      <NavLink to="/store">
+      <NavLink
+        to="/store"
+        className={({ isActive }) => (isActive ? styles.active : undefined)}
+      >
         <p>Store</p>
       </NavLink>
-      <NavLink to="/about">
-        <p>About</p>
+      <NavLink
+        to="/contact"
+        className={({ isActive }) => (isActive ? styles.active : undefined)}
+      >
+        <p>Contact</p>
       </NavLink>
     </header>
   );
