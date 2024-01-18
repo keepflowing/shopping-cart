@@ -1,0 +1,34 @@
+.card {
+  background-color: var(--primary-light-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 300px;
+}
+
+.card img {
+  width: 100%;
+  padding-top: 100%;
+}
+
+.card button {
+  height: 2rem;
+  margin: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0;
+  color: var(--primary-light-color);
+}
+
+.card button:hover {
+  background-color: var(--secondary-color);
+}
+
+.flexBetween {
+  margin-left: 10px;
+  margin-right: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

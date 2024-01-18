@@ -16,7 +16,7 @@ beforeEach(() => {
 describe('Card', () => {
   it('renders the card with all its elements', () => {
     expect(screen.getByRole('img')).toBeInTheDocument();
-    expect(screen.getByText('39')).toBeInTheDocument();
+    expect(screen.getByText(/39/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /add to cart/i }))
       .toBeInTheDocument();
     expect(screen.getByRole('link', { name: /more info/i }))

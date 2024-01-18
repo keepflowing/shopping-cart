@@ -1,7 +1,7 @@
 .navbar {
   align-items: center;
-  background-color: #00523c;
-  color: #c7c7c7;
+  background-color: var(--primary-color);
+  color: var(--primary-light-color);
   display: flex;
   font-size: 1.5rem;
   height: 4rem;
@@ -14,5 +14,5 @@ a {
 }
 
 .active {
-  color: #46eafd;
+  color: var(--active-link-color);
 }
