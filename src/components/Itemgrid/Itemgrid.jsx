@@ -1,25 +1,10 @@
 import Card from '../Card/Card';
 import styles from './Itemgrid.module.css';
 
-export default function Itemgrid() {
+export default function Itemgrid({ items }) {
   return (
     <div data-testid="itemgrid" className={styles.grid}>
-      <Card item={{
-        id: 1, title: 'Test', price: 39, imgUrl: 'imgUrl',
-      }}
-      />
-      <Card item={{
-        id: 1, title: 'Test', price: 39, imgUrl: 'imgUrl',
-      }}
-      />
-      <Card item={{
-        id: 1, title: 'Test', price: 39, imgUrl: 'imgUrl',
-      }}
-      />
-      <Card item={{
-        id: 1, title: 'Test', price: 39, imgUrl: 'imgUrl',
-      }}
-      />
+      {items ? items.map((i) => <Card key={i.id} item={i} />) : <p>No items</p>}
     </div>
   );
 }
