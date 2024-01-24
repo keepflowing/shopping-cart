@@ -11,7 +11,6 @@ export default function Store() {
   ];
   return (
     <div className="container" data-testid="store">
-      <h1>Store</h1>
       <Itemgrid items={items} />
     </div>
   );

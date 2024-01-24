@@ -1,0 +1,30 @@
+.hero {
+  align-items: center;
+  background-color: var(--primary-light-color);
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 2rem;
+  margin: 10px;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0;
+  color: var(--primary-light-color);
+  padding: 1rem;
+}
+
+.hero button:hover {
+  background-color: var(--secondary-color);
+}
