@@ -3,10 +3,12 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import styles from './Navbar.module.css';
 
+const title = 'Test123';
+
 beforeEach(() => {
   render(
     <MemoryRouter>
-      <Navbar />
+      <Navbar title={title} />
       <Routes>
         <Route path="/contact" element={<h1>Contact Page</h1>} />
       </Routes>
@@ -37,5 +39,10 @@ describe('Navbar', () => {
     fireEvent.click(contactLink);
 
     expect(screen.getByText('Contact Page')).toBeInTheDocument();
+  });
+
+  it('renders the specified title', () => {
+    const heading = screen.getByRole('heading', { name: title });
+    expect(heading).toBeInTheDocument();
   });
 });

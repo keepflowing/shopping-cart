@@ -5,12 +5,26 @@
   display: flex;
   font-size: 1.5rem;
   height: 4rem;
-  justify-content: space-evenly;
+  justify-content: start;
+  padding-left: 2rem;
+}
+
+.left {
+  border-right: solid var(--primary-light-color) 2px;
+  display: flex;
+  padding-right: 1rem;
+}
+
+.right {
+  padding-left: 1rem;
+  display: flex;
+  gap: 15px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .active {
