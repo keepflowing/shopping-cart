@@ -5,9 +5,9 @@ export default function Store() {
     { id: 1, imgUrl: 'imgUrl', price: 90 },
     { id: 2, imgUrl: 'imgUrl', price: 90 },
     { id: 3, imgUrl: 'imgUrl', price: 90 },
-    { id: 1, imgUrl: 'imgUrl', price: 90 },
-    { id: 2, imgUrl: 'imgUrl', price: 90 },
-    { id: 3, imgUrl: 'imgUrl', price: 90 },
+    { id: 4, imgUrl: 'imgUrl', price: 90 },
+    { id: 5, imgUrl: 'imgUrl', price: 90 },
+    { id: 6, imgUrl: 'imgUrl', price: 90 },
   ];
   return (
     <div className="container" data-testid="store">
