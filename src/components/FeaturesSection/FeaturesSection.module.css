@@ -1,0 +1,12 @@
+.features {
+  align-items: center;
+  background-color: var(--primary-light-color);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.features h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
