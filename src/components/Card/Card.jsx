@@ -28,7 +28,7 @@ export default function Card({ item = {} }) {
               {item.price}
             </p>
           )}
-        <Link to={`./item/${item.id}`}>More info</Link>
+        <Link to={`/item/${item.id}`}>More info</Link>
       </div>
       <button type="button">Add to cart</button>
     </div>

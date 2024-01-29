@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Home from './pages/Home/Home';
 import Store from './pages/Store/Store';
+import Itempage from './pages/Itempage/Itempage';
 import Contact from './pages/Contact/Contact';
 import Navbar from './components/Navbar/Navbar';
 
@@ -50,6 +51,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home featuredItem={featuredProduct} />} />
         <Route path="/store" element={<Store items={products} />} />
+        <Route path="/item/:id" element={<Itempage items={products} />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </main>
