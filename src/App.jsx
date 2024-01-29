@@ -11,6 +11,7 @@ import fetchProducts from './services/productService';
 export default function App() {
   const [products, setProducts] = useState([]);
   const [featuredProduct, setFeaturedProduct] = useState([]);
+  const [cart, setCart] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -47,11 +48,29 @@ export default function App() {
 
   return (
     <main>
-      <Navbar title="My Store" />
+      <Navbar title="My Store" cart={cart} setCart={setCart} />
       <Routes>
         <Route path="/" element={<Home featuredItem={featuredProduct} />} />
-        <Route path="/store" element={<Store items={products} />} />
-        <Route path="/item/:id" element={<Itempage items={products} />} />
+        <Route
+          path="/store"
+          element={(
+            <Store
+              items={products}
+              cart={cart}
+              setCart={setCart}
+            />
+)}
+        />
+        <Route
+          path="/item/:id"
+          element={(
+            <Itempage
+              items={products}
+              cart={cart}
+              setCart={setCart}
+            />
+)}
+        />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </main>

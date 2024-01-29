@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineShopping, AiOutlineSearch } from 'react-icons/ai';
 import styles from './Navbar.module.css';
 
-export default function Navbar({ title }) {
+export default function Navbar({ title, cart }) {
   return (
     <header
       className={styles.navbar}
@@ -43,6 +43,7 @@ export default function Navbar({ title }) {
         </div>
         <div className={styles.cart}>
           <AiOutlineShopping />
+          {cart.length > 0 && <div className={styles.dot} />}
         </div>
         <div className={styles.hamburger}>
           <RxHamburgerMenu />

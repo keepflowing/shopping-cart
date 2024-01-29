@@ -18,6 +18,20 @@
   display: flex;
 }
 
+.cart {
+  position: relative;
+}
+
+.cart .dot {
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: red;
+  border-radius: 50%;
+}
+
 .hamburger, .cart, .search {
   margin-right: 10px;
   cursor: pointer;
