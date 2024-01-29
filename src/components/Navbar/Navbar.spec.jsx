@@ -8,7 +8,7 @@ const title = 'Test123';
 beforeEach(() => {
   render(
     <MemoryRouter>
-      <Navbar title={title} />
+      <Navbar title={title} cart={[]} />
       <Routes>
         <Route path="/contact" element={<h1>Contact Page</h1>} />
       </Routes>
