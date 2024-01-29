@@ -5,19 +5,32 @@
   display: flex;
   font-size: 1.5rem;
   height: 4rem;
-  justify-content: start;
+  justify-content: space-between;
   padding-left: 1rem;
 }
 
+.first {
+  display: flex;
+  justify-content: start;
+}
+
+.icons {
+  display: flex;
+}
+
+.hamburger, .cart, .search {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 .left {
-  border-right: solid var(--primary-light-color) 2px;
   display: flex;
   padding-right: 0.8rem;
 }
 
 .right {
   padding-left: 0.8rem;
-  display: flex;
+  display: none;
   gap: 10px;
 }
 
@@ -29,4 +42,19 @@ a {
 
 .active {
   color: var(--active-link-color);
+}
+
+@media screen and (min-width: 500px) {
+  .left {
+    border-right: solid var(--primary-light-color) 2px;
+  }
+  .right {
+      display: flex;
+  }
+  .hamburger {
+    display: none
+  }
+  .navbar {
+    justify-content: space-between;
+  }
 }
