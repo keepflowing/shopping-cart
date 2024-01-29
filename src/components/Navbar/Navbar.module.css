@@ -32,9 +32,23 @@
   border-radius: 50%;
 }
 
+.dropdown {
+  padding: 1rem;
+  position: absolute;
+  top: 100%;
+  right: -30%;
+  border: solid white 1px;
+  background-color: var(--primary-color);
+}
+
 .hamburger, .cart, .search {
+  border: none;
   margin-right: 10px;
   cursor: pointer;
+  position: relative;
+  background-color: inherit;
+  color: white;
+  font-size: inherit;
 }
 
 .left {
