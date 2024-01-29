@@ -3,6 +3,9 @@
   background-color: var(--primary-light-color);
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
   width: 100%;
 }
 

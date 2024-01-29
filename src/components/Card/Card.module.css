@@ -1,5 +1,5 @@
 .card {
-  background-color: var(--primary-light-color);
+  background-color: white;
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -8,8 +8,11 @@
 }
 
 .card img {
-  width: 100%;
-  padding-top: 100%;
+  margin: auto;
+  margin-bottom: 5px;
+  object-fit: contain;
+  height: 180px;
+  width: 180px;
 }
 
 .card button {
@@ -31,4 +34,16 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.card s {
+  color: #a2a2a2
+}
+
+.green {
+  color: #00681cff
+}
+
+.special {
+  color: #c00101
 }

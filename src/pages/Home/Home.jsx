@@ -1,7 +1,7 @@
 import FeaturesSection from '../../components/FeaturesSection/FeaturesSection';
 import HeroSection from '../../components/HeroSection/HeroSection';
 
-export default function Home({ featuredItems }) {
+export default function Home({ featuredItem }) {
   return (
     <div className="container" data-testid="home">
       <HeroSection
@@ -9,7 +9,7 @@ export default function Home({ featuredItems }) {
         tagline="Good quality, great prices."
         cta="See products"
       />
-      <FeaturesSection featuredItems={featuredItems} />
+      <FeaturesSection featuredItem={featuredItem} />
     </div>
   );
 }
